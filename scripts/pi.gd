@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const UP = Vector2(0,-1)
-const JUMP = -725
+export var jump = -725
 var motion = Vector2(0,0)
 const GRAVITY = 45
 var speed = 400
@@ -24,7 +24,7 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up"):
-			motion.y = JUMP
+			motion.y = jump
 			$Sprite.frame = 5
 		else:
 			$Sprite.frame = 0
