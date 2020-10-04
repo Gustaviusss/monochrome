@@ -1,0 +1,631 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/blocks.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Fase5.gd" type="Script" id=4]
+[ext_resource path="res://assets/img/button.png" type="Texture" id=5]
+[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/img/block.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/PixelBit-Free.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/img/num/z.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/num/c.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/num/d.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/num/t.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/num/q.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/num/o.png" type="Texture" id=14]
+[ext_resource path="res://assets/img/num/u.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/num/n.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/num/s.png" type="Texture" id=17]
+[ext_resource path="res://assets/img/num/title.png" type="Texture" id=18]
+[ext_resource path="res://scenes/resetb.tscn" type="PackedScene" id=19]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.6311, 10 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "push"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ), Color( 0.666667, 0.121569, 0.121569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 11.7657, 69.0918 )
+
+[sub_resource type="Animation" id=13]
+resource_name = "destroy"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.964706 ), Color( 1, 1, 1, 0.890196 ), Color( 1, 1, 1, 0.8 ), Color( 1, 1, 1, 0.243137 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFont" id=14]
+size = 30
+extra_spacing_char = 22
+font_data = ExtResource( 8 )
+
+[node name="Fase5" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="real_blocks" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 65578, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131114, 0, 0, 196621, 0, 0, 196637, 0, 0, 196650, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262157, 0, 0, 262173, 0, 0, 262186, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 327708, 0, 0, 327709, 0, 0, 327722, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393258, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458788, 0, 0, 458789, 0, 0, 458790, 0, 0, 458791, 0, 0, 458792, 0, 0, 458793, 0, 0, 458794, 0, 0, 524288, 0, 0, 524309, 0, 0, 524330, 0, 0, 589824, 0, 0, 589845, 0, 0, 589866, 0, 0, 655360, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655381, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655402, 0, 0, 720896, 0, 0, 720917, 0, 0, 720938, 0, 0, 786432, 0, 0, 786453, 0, 0, 786474, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 852004, 0, 0, 852005, 0, 0, 852006, 0, 0, 852007, 0, 0, 852008, 0, 0, 852009, 0, 0, 852010, 0, 0, 917504, 0, 0, 917525, 0, 0, 917546, 0, 0, 983040, 0, 0, 983061, 0, 0, 983082, 0, 0, 1048576, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048597, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048618, 0, 0, 1114112, 0, 0, 1114133, 0, 0, 1114154, 0, 0, 1179648, 0, 0, 1179669, 0, 0, 1179690, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1245226, 0, 0, 1310720, 0, 0, 1310762, 0, 0, 1441791, 0, 0, 1376298, 0, 0, 1507327, 0, 0, 1441800, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441821, 0, 0, 1441822, 0, 0, 1441823, 0, 0, 1441824, 0, 0, 1441825, 0, 0, 1441826, 0, 0, 1441834, 0, 0, 1572863, 0, 0, 1507370, 0, 0, 1638399, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572868, 0, 0, 1572869, 0, 0, 1572870, 0, 0, 1572871, 0, 0, 1572872, 0, 0, 1572873, 0, 0, 1572874, 0, 0, 1572875, 0, 0, 1572876, 0, 0, 1572877, 0, 0, 1572878, 0, 0, 1572879, 0, 0, 1572880, 0, 0, 1572881, 0, 0, 1572882, 0, 0, 1572883, 0, 0, 1572884, 0, 0, 1572885, 0, 0, 1572886, 0, 0, 1572887, 0, 0, 1572888, 0, 0, 1572889, 0, 0, 1572890, 0, 0, 1572891, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 0, 0, 1572896, 0, 0, 1572897, 0, 0, 1572898, 0, 0, 1572899, 0, 0, 1572900, 0, 0, 1572901, 0, 0, 1572902, 0, 0, 1572903, 0, 0, 1572904, 0, 0, 1572905, 0, 0, 1572906, 0, 0 )
+
+[node name="bg" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20.0218, 0 )
+
+[node name="pi" parent="." instance=ExtResource( 1 )]
+position = Vector2( 72.9377, 534.601 )
+
+[node name="botoes" type="Node" parent="."]
+
+[node name="zero" type="Area2D" parent="botoes"]
+position = Vector2( 991.973, 531.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/zero"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/zero"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/zero"]
+anims/push = SubResource( 2 )
+
+[node name="um" type="Area2D" parent="botoes"]
+position = Vector2( 39.2878, 275.604 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/um"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/um"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/um"]
+anims/push = SubResource( 3 )
+
+[node name="dois" type="Area2D" parent="botoes"]
+position = Vector2( 991.973, 120.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/dois"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/dois"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/dois"]
+anims/push = SubResource( 4 )
+
+[node name="tres" type="Area2D" parent="botoes"]
+position = Vector2( 487.973, 402.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/tres"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/tres"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/tres"]
+anims/push = SubResource( 5 )
+
+[node name="quatro" type="Area2D" parent="botoes"]
+position = Vector2( 991.973, 254.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/quatro"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/quatro"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/quatro"]
+anims/push = SubResource( 6 )
+
+[node name="cinco" type="Area2D" parent="botoes"]
+position = Vector2( 39.5363, 407.785 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/cinco"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/cinco"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/cinco"]
+anims/push = SubResource( 7 )
+
+[node name="seis" type="Area2D" parent="botoes"]
+position = Vector2( 543.973, 258.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/seis"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/seis"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/seis"]
+anims/push = SubResource( 8 )
+
+[node name="sete" type="Area2D" parent="botoes"]
+position = Vector2( 991.973, 406.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/sete"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/sete"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/sete"]
+anims/push = SubResource( 9 )
+
+[node name="oito" type="Area2D" parent="botoes"]
+position = Vector2( 487.973, 258.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/oito"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/oito"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/oito"]
+anims/push = SubResource( 10 )
+
+[node name="nove" type="Area2D" parent="botoes"]
+position = Vector2( 543.973, 402.995 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="botoes/nove"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/nove"]
+shape = SubResource( 1 )
+
+[node name="animzero" type="AnimationPlayer" parent="botoes/nove"]
+anims/push = SubResource( 11 )
+
+[node name="parede" type="StaticBody2D" parent="."]
+position = Vector2( 4, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="parede"]
+modulate = Color( 1, 1, 1, 0.964706 )
+position = Vector2( 155.388, 95.6303 )
+scale = Vector2( 1, 5.7477 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede"]
+position = Vector2( 155.377, 95.8925 )
+shape = SubResource( 12 )
+
+[node name="anim" type="AnimationPlayer" parent="parede"]
+anims/destroy = SubResource( 13 )
+
+[node name="door" parent="." instance=ExtResource( 6 )]
+position = Vector2( 21.1517, 59.4723 )
+scale = Vector2( 1, 1.15 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 399.852
+margin_top = 74.6954
+margin_right = 629.852
+margin_bottom = 114.695
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = -51.3737
+margin_right = 290.626
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 14 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="letras" type="Node" parent="."]
+
+[node name="0" type="Sprite" parent="letras"]
+position = Vector2( 997.369, 503.675 )
+scale = Vector2( 0.413323, 0.409185 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="1" type="Sprite" parent="letras"]
+position = Vector2( 39.2394, 239.407 )
+scale = Vector2( 0.523438, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="2" type="Sprite" parent="letras"]
+position = Vector2( 992.257, 88.9014 )
+scale = Vector2( 0.460203, 0.443939 )
+texture = ExtResource( 11 )
+
+[node name="3" type="Sprite" parent="letras"]
+position = Vector2( 487.073, 370.562 )
+scale = Vector2( 0.535466, 0.489013 )
+texture = ExtResource( 12 )
+
+[node name="4" type="Sprite" parent="letras"]
+position = Vector2( 994.094, 223.334 )
+scale = Vector2( 0.508645, 0.473173 )
+texture = ExtResource( 13 )
+
+[node name="5" type="Sprite" parent="letras"]
+position = Vector2( 40.3365, 372.152 )
+scale = Vector2( 0.46114, 0.498304 )
+texture = ExtResource( 10 )
+
+[node name="6" type="Sprite" parent="letras"]
+position = Vector2( 993.183, 373.163 )
+scale = Vector2( 0.526177, 0.479722 )
+texture = ExtResource( 17 )
+
+[node name="7" type="Sprite" parent="letras"]
+position = Vector2( 544.273, 226.476 )
+scale = Vector2( 0.464069, 0.51975 )
+texture = ExtResource( 17 )
+
+[node name="8" type="Sprite" parent="letras"]
+position = Vector2( 486.893, 225.162 )
+scale = Vector2( 0.526175, 0.563338 )
+texture = ExtResource( 14 )
+
+[node name="9" type="Sprite" parent="letras"]
+position = Vector2( 542.274, 372.828 )
+scale = Vector2( 0.415348, 0.443188 )
+texture = ExtResource( 16 )
+
+[node name="title" type="Sprite" parent="letras"]
+position = Vector2( 518.036, 34.9448 )
+scale = Vector2( 0.242081, 0.212934 )
+texture = ExtResource( 18 )
+
+[node name="reset" parent="." instance=ExtResource( 19 )]
+position = Vector2( 974.483, 12.429 )
+[connection signal="body_entered" from="botoes/zero" to="." method="_on_0_body_entered"]
+[connection signal="body_entered" from="botoes/um" to="." method="_on_um_body_entered"]
+[connection signal="body_entered" from="botoes/dois" to="." method="_on_dois_body_entered"]
+[connection signal="body_entered" from="botoes/tres" to="." method="_on_tres_body_entered"]
+[connection signal="body_entered" from="botoes/quatro" to="." method="_on_quatro_body_entered"]
+[connection signal="body_entered" from="botoes/cinco" to="." method="_on_cinco_body_entered"]
+[connection signal="body_entered" from="botoes/seis" to="." method="_on_seis_body_entered"]
+[connection signal="body_entered" from="botoes/sete" to="." method="_on_sete_body_entered"]
+[connection signal="body_entered" from="botoes/oito" to="." method="_on_oito_body_entered"]
+[connection signal="body_entered" from="botoes/nove" to="." method="_on_nove_body_entered"]

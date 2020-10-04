@@ -1,0 +1,275 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/blocks.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/img/block.png" type="Texture" id=4]
+[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/img/button.png" type="Texture" id=6]
+[ext_resource path="res://scripts/Fase6.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 99.7637, 12.1446 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 51.9026, 12.2474 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.61514, 6.08704 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "move_floor"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../inv_floor/chao:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 734.238, 384 ), Vector2( 734.238, 75 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "show_floor"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../inv_floor/chao/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../inv_floor/chao/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../inv_floor/chao2/Sprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../inv_floor/chao2/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../inv_floor/chao3/Sprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../inv_floor/chao3/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.45098, 0.0745098, 0.0745098, 1 ), Color( 1, 1, 1, 1 ), Color( 0.45098, 0.0745098, 0.0745098, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "hide_floor"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../inv_floor/parede/Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../inv_floor/parede/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.45098, 0.0745098, 0.0745098, 1 ), Color( 1, 1, 1, 1 ), Color( 0.45098, 0.0745098, 0.0745098, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Fase06" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="bg" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1.76779, 1.41422 )
+
+[node name="real_blocks" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 65536, 0, 0, 65578, 0, 0, 131072, 0, 0, 131114, 0, 0, 196608, 0, 0, 196650, 0, 0, 262144, 0, 0, 262183, 0, 0, 262184, 0, 0, 262185, 0, 0, 262186, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327722, 0, 0, 393216, 0, 0, 393258, 0, 0, 458752, 0, 0, 458794, 0, 0, 524288, 0, 0, 524330, 0, 0, 589824, 0, 0, 589866, 0, 0, 655360, 0, 0, 655402, 0, 0, 720896, 0, 0, 720938, 0, 0, 786432, 0, 0, 786474, 0, 0, 851968, 0, 0, 852010, 0, 0, 917504, 0, 0, 917546, 0, 0, 983040, 0, 0, 983082, 0, 0, 1048576, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048618, 0, 0, 1114112, 0, 0, 1114132, 0, 0, 1114154, 0, 0, 1179648, 0, 0, 1179668, 0, 0, 1179690, 0, 0, 1245184, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245226, 0, 0, 1376255, 0, 0, 1310720, 0, 0, 1310762, 0, 0, 1441791, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376298, 0, 0, 1507327, 0, 0, 1441834, 0, 0, 1572863, 0, 0, 1507370, 0, 0, 1638399, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572868, 0, 0, 1572906, 0, 0 )
+
+[node name="pi" parent="." instance=ExtResource( 1 )]
+position = Vector2( 20.2733, 542.931 )
+
+[node name="door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 989.936, 63.6283 )
+
+[node name="inv_floor" type="Node" parent="."]
+
+[node name="chao" type="StaticBody2D" parent="inv_floor"]
+position = Vector2( 734.238, 384 )
+
+[node name="Sprite" type="Sprite" parent="inv_floor/chao"]
+visible = false
+scale = Vector2( 8.41512, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inv_floor/chao"]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="chao2" type="StaticBody2D" parent="inv_floor"]
+position = Vector2( 504.932, 121.936 )
+
+[node name="Sprite" type="Sprite" parent="inv_floor/chao2"]
+visible = false
+scale = Vector2( 8.41512, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inv_floor/chao2"]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="chao3" type="StaticBody2D" parent="inv_floor"]
+position = Vector2( 268.067, 202.571 )
+
+[node name="Sprite" type="Sprite" parent="inv_floor/chao3"]
+visible = false
+scale = Vector2( 8.41512, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inv_floor/chao3"]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="parede" type="StaticBody2D" parent="inv_floor"]
+position = Vector2( 921.63, 68.0808 )
+rotation = 1.5708
+
+[node name="Sprite" type="Sprite" parent="inv_floor/parede"]
+scale = Vector2( 4.28446, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inv_floor/parede"]
+shape = SubResource( 2 )
+
+[node name="botoes" type="Node" parent="."]
+
+[node name="b1" type="Area2D" parent="botoes"]
+position = Vector2( 468.181, 433.181 )
+
+[node name="Sprite" type="Sprite" parent="botoes/b1"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/b1"]
+shape = SubResource( 3 )
+
+[node name="anim" type="AnimationPlayer" parent="botoes/b1"]
+anims/move_floor = SubResource( 5 )
+anims/show_floor = SubResource( 4 )
+
+[node name="b2" type="Area2D" parent="botoes"]
+position = Vector2( 41.596, 76.1105 )
+rotation = 3.14159
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Sprite" type="Sprite" parent="botoes/b2"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/b2"]
+shape = SubResource( 3 )
+
+[node name="anim" type="AnimationPlayer" parent="botoes/b2"]
+anims/hide_floor = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="body_entered" from="botoes/b1" to="." method="_on_b1_body_entered"]
+[connection signal="body_entered" from="botoes/b2" to="." method="_on_b2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

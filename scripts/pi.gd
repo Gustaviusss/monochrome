@@ -7,7 +7,6 @@ const GRAVITY = 45
 var speed = 400
 export var flip = false
 
-
 func _ready():
 	if flip==true:
 		$Sprite.flip_h = true
@@ -24,7 +23,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -speed
 		$Sprite.flip_h = true
-	else: 
+	else:
 		motion.x = 0
 	
 	if is_on_floor():
@@ -35,7 +34,9 @@ func _physics_process(delta):
 			$Sprite.frame = 0
 	
 	motion = move_and_slide(motion, UP)
-
+	
+	if $".".get_position().y >= 750:
+		get_tree().reload_current_scene()
 
 func _on_button_area_entered(area):
 	if Input.is_action_pressed("ui_select"):

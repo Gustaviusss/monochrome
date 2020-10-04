@@ -8,14 +8,15 @@ script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_right = 209.0
-margin_bottom = 193.0
+margin_right = 28.0
+margin_bottom = 28.0
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="Button"]
-position = Vector2( 98.1629, 85.8925 )
+position = Vector2( 15.0372, 14.6156 )
+scale = Vector2( 0.150994, 0.147785 )
 texture = ExtResource( 1 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
