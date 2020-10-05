@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tema3.wav-6d96175d5b243828ffd696b3be4b9b25.sample"
+
+[deps]
+
+source_file="res://assets/sfx/tema3.wav"
+dest_files=[ "res://.import/tema3.wav-6d96175d5b243828ffd696b3be4b9b25.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

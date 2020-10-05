@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://assets/img/num/s.png" type="Texture" id=17]
 [ext_resource path="res://assets/img/num/title.png" type="Texture" id=18]
 [ext_resource path="res://scenes/resetb.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/fases/song.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.32403, 10 )
@@ -548,6 +549,7 @@ anims/destroy = SubResource( 13 )
 [node name="door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 21.1517, 59.4723 )
 scale = Vector2( 1, 1.15 )
+local = "res://scenes/fases/Fase10.tscn"
 
 [node name="Control" type="Control" parent="."]
 margin_left = 399.852
@@ -629,6 +631,8 @@ texture = ExtResource( 18 )
 
 [node name="reset" parent="." instance=ExtResource( 19 )]
 position = Vector2( 974.483, 12.429 )
+
+[node name="song" parent="." instance=ExtResource( 20 )]
 [connection signal="body_entered" from="botoes/zero" to="." method="_on_0_body_entered"]
 [connection signal="body_entered" from="botoes/um" to="." method="_on_um_body_entered"]
 [connection signal="body_entered" from="botoes/dois" to="." method="_on_dois_body_entered"]

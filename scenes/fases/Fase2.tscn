@@ -28,4 +28,3 @@ local = "res://scenes/fases/Fase3.tscn"
 
 [node name="reset" parent="." instance=ExtResource( 6 )]
 position = Vector2( 956.338, 38.1637 )
-scale = Vector2( 0.2, 0.2 )

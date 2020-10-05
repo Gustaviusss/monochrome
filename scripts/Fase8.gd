@@ -22,3 +22,7 @@ func _on_b3_body_entered(body):
 
 func _on_b5_body_entered(body):
 	get_tree().reload_current_scene()
+
+
+func _on_b6_body_entered(body):
+	$anim.play("6_move")
