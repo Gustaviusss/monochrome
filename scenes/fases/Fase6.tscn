@@ -15,9 +15,9 @@ extents = Vector2( 99.7637, 12.1446 )
 extents = Vector2( 51.9026, 12.2474 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 7.61514, 6.08704 )
+extents = Vector2( 1.73709, 7.1145 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "move_floor"
 length = 2.5
 loop = true
@@ -34,8 +34,7 @@ tracks/0/keys = {
 "values": [ Vector2( 734.238, 384 ), Vector2( 734.238, 75 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "show_floor"
+[sub_resource type="Animation" id=5]
 step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../inv_floor/chao/Sprite:visible")
@@ -240,21 +239,23 @@ shape = SubResource( 2 )
 [node name="botoes" type="Node" parent="."]
 
 [node name="b1" type="Area2D" parent="botoes"]
-position = Vector2( 468.181, 433.181 )
+position = Vector2( 479.181, 433.181 )
 
 [node name="Sprite" type="Sprite" parent="botoes/b1"]
+position = Vector2( 0.148651, 0.148651 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/b1"]
+position = Vector2( -3.12167, 0.743256 )
 shape = SubResource( 3 )
 
 [node name="anim" type="AnimationPlayer" parent="botoes/b1"]
-anims/move_floor = SubResource( 5 )
-anims/show_floor = SubResource( 4 )
+anims/move_floor = SubResource( 4 )
+anims/show_floor = SubResource( 5 )
 
 [node name="b2" type="Area2D" parent="botoes"]
-position = Vector2( 41.596, 76.1105 )
+position = Vector2( 25.596, 76.1105 )
 rotation = 3.14159
 scale = Vector2( 1.5, 1.5 )
 
@@ -263,6 +264,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/b2"]
+position = Vector2( -2.72983, 1.3649 )
 shape = SubResource( 3 )
 
 [node name="anim" type="AnimationPlayer" parent="botoes/b2"]

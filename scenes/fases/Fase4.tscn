@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/img/block.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.3964, 7.40527 )
+extents = Vector2( 3.73004, 7.40527 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "active"
@@ -138,7 +138,7 @@ position = Vector2( 995.883, 543.828 )
 local = "res://scenes/fases/Fase6.tscn"
 
 [node name="button" type="Area2D" parent="."]
-position = Vector2( 348.032, 552.584 )
+position = Vector2( 359.032, 552.584 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -149,7 +149,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
-position = Vector2( 0.157501, 0.157532 )
+position = Vector2( -2.78561, 0.998413 )
 shape = SubResource( 1 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
