@@ -1,14 +1,13 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/blocks.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/bg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/img/button.png" type="Texture" id=5]
-[ext_resource path="res://scripts/Fase4.gd" type="Script" id=6]
+[ext_resource path="res://scripts/level_scripts/Fase4.gd" type="Script" id=6]
 [ext_resource path="res://assets/img/block.png" type="Texture" id=7]
-[ext_resource path="res://scenes/fases/song.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/text.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.73004, 7.40527 )
@@ -198,8 +197,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chaoinvisivel/chao3/StaticBody2D"]
 shape = SubResource( 4 )
-
-[node name="song" parent="." instance=ExtResource( 8 )]
 
 [node name="Label" parent="." instance=ExtResource( 9 )]
 margin_left = 31.8513

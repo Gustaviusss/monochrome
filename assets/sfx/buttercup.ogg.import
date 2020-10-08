@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/buttercup.ogg-0aaae920ab5eeaf4c5a6959af91afef5.oggstr"
+
+[deps]
+
+source_file="res://assets/sfx/buttercup.ogg"
+dest_files=[ "res://.import/buttercup.ogg-0aaae920ab5eeaf4c5a6959af91afef5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

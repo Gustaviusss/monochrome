@@ -1,9 +1,7 @@
 extends Node2D
 
-
 func _ready():
 	$anim.play("show logo")
-
 
 
 func _on_Timer_timeout():

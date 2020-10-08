@@ -1,14 +1,13 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/blocks.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/bg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/img/block.png" type="Texture" id=5]
 [ext_resource path="res://assets/img/button.png" type="Texture" id=6]
-[ext_resource path="res://scripts/Fase8.gd" type="Script" id=7]
-[ext_resource path="res://scenes/fases/song.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/text.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/level_scripts/Fase8.gd" type="Script" id=7]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 72, 12 )
@@ -355,8 +354,6 @@ anims/2_move = SubResource( 5 )
 anims/3_move = SubResource( 6 )
 anims/4_move = SubResource( 7 )
 anims/6_move = SubResource( 8 )
-
-[node name="song" parent="." instance=ExtResource( 8 )]
 
 [node name="Label" parent="." instance=ExtResource( 9 )]
 text = "o tortuoso caminho"

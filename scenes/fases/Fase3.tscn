@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/pi.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/blocks.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/fake_blocks.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/fases/song.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/text.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/fake_blocks.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=7]
 
 [node name="Fase3" type="Node2D"]
 
@@ -27,8 +26,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 24.1891, 62.0831 )
 local = "res://scenes/fases/Fase4.tscn"
-
-[node name="song" parent="." instance=ExtResource( 6 )]
 
 [node name="Label" parent="." instance=ExtResource( 7 )]
 margin_left = 272.971

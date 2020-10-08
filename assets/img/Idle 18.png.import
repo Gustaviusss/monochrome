@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/breset.png-30fec56379fca23c970dbb2dd44648f8.stex"
+path="res://.import/Idle 18.png-2162d643ba6456b0cfe5ea2be44ca9e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/breset.png"
-dest_files=[ "res://.import/breset.png-30fec56379fca23c970dbb2dd44648f8.stex" ]
+source_file="res://assets/img/Idle 18.png"
+dest_files=[ "res://.import/Idle 18.png-2162d643ba6456b0cfe5ea2be44ca9e6.stex" ]
 
 [params]
 

@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Control",
+"class": "HomeControl",
+"language": "GDScript",
+"path": "res://scripts/main_scripts/Home.gd"
+}, {
+"base": "Resource",
+"class": "SAveFile",
+"language": "GDScript",
+"path": "res://scripts/main_scripts/SaveFile.gd"
+} ]
 _global_script_class_icons={
-
+"HomeControl": "",
+"SAveFile": ""
 }
 
 [application]
@@ -20,6 +31,10 @@ run/main_scene="res://scenes/intro.tscn"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+
+[autoload]
+
+MusicController="*res://scenes/objects/MusicController.tscn"
 
 [display]
 
