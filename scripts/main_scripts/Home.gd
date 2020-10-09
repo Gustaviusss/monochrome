@@ -9,6 +9,9 @@ func _ready():
 	if save_game.level == 1:
 		$bContinue.disabled = true
 		$bContinue.visible = false
+	else: 
+		$bContinue.disabled = false
+		$bContinue.visible = true
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):

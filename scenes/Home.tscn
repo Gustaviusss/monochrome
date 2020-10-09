@@ -32,9 +32,9 @@ texture = ExtResource( 3 )
 [node name="bStart" type="Button" parent="."]
 process_priority = 1
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 472.0
+margin_left = 479.0
 margin_top = 344.0
-margin_right = 792.0
+margin_right = 799.0
 margin_bottom = 421.0
 focus_mode = 1
 action_mode = 0
@@ -51,9 +51,9 @@ texture = ExtResource( 2 )
 
 [node name="bContinue" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 432.0
+margin_left = 439.0
 margin_top = 464.0
-margin_right = 843.0
+margin_right = 850.0
 margin_bottom = 541.0
 flat = true
 __meta__ = {
