@@ -56,6 +56,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("reset:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("home:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "show_buttons"
@@ -109,14 +133,40 @@ tracks/3/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("home:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("reset:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="reset" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="home" type="Button" parent="."]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 52.0
 margin_right = 28.0
-margin_bottom = 27.9999
+margin_bottom = 79.9998
 disabled = true
 __meta__ = {
 "_edit_group_": true,
@@ -129,9 +179,11 @@ scale = Vector2( 1.33333, 1.27273 )
 texture = ExtResource( 1 )
 
 [node name="reset" type="Button" parent="."]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 26.0
 margin_right = 28.0
-margin_bottom = 28.0
+margin_bottom = 54.0
 disabled = true
 __meta__ = {
 "_edit_group_": true,

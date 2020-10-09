@@ -1,15 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/objects/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/AndroidControls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/objects/fake_blocks.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=7]
 
 [node name="Fase3" type="Node2D"]
-
-[node name="bg" parent="." instance=ExtResource( 2 )]
 
 [node name="pi" parent="." instance=ExtResource( 1 )]
 position = Vector2( 27.7183, 546.806 )
@@ -33,3 +31,5 @@ margin_top = 17.8578
 margin_right = 784.971
 margin_bottom = 81.8578
 text = "cuidado onde pisa"
+
+[node name="AndroidControls" parent="." instance=ExtResource( 2 )]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/objects/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/AndroidControls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/img/block.png" type="Texture" id=4]
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=5]
@@ -176,9 +176,6 @@ tracks/2/keys = {
 [node name="Fase06" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="bg" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1.76779, 1.41422 )
-
 [node name="real_blocks" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 65536, 0, 0, 65578, 0, 0, 131072, 0, 0, 131114, 0, 0, 196608, 0, 0, 196650, 0, 0, 262144, 0, 0, 262183, 0, 0, 262184, 0, 0, 262185, 0, 0, 262186, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327722, 0, 0, 393216, 0, 0, 393258, 0, 0, 458752, 0, 0, 458794, 0, 0, 524288, 0, 0, 524330, 0, 0, 589824, 0, 0, 589866, 0, 0, 655360, 0, 0, 655402, 0, 0, 720896, 0, 0, 720938, 0, 0, 786432, 0, 0, 786474, 0, 0, 851968, 0, 0, 852010, 0, 0, 917504, 0, 0, 917546, 0, 0, 983040, 0, 0, 983082, 0, 0, 1048576, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048618, 0, 0, 1114112, 0, 0, 1114132, 0, 0, 1114154, 0, 0, 1179648, 0, 0, 1179668, 0, 0, 1179690, 0, 0, 1245184, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245226, 0, 0, 1376255, 0, 0, 1310720, 0, 0, 1310762, 0, 0, 1441791, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376298, 0, 0, 1507327, 0, 0, 1441834, 0, 0, 1572863, 0, 0, 1507370, 0, 0, 1638399, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572868, 0, 0, 1572906, 0, 0 )
 
@@ -277,6 +274,8 @@ one_shot = true
 
 [node name="Label" parent="." instance=ExtResource( 9 )]
 text = "nao caia"
+
+[node name="AndroidControls" parent="." instance=ExtResource( 2 )]
 [connection signal="body_entered" from="botoes/b1" to="." method="_on_b1_body_entered"]
 [connection signal="body_entered" from="botoes/b2" to="." method="_on_b2_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

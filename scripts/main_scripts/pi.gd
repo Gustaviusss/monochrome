@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name PlayerControl
 
 const UP = Vector2(0,-1)
 export var jump = -725
@@ -12,7 +13,7 @@ func _ready():
 		$Sprite.flip_h = true
 	else:
 		$Sprite.flip_h = false
-	pass
+
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -37,7 +38,3 @@ func _physics_process(delta):
 	
 	if $".".get_position().y >= 750:
 		get_tree().reload_current_scene()
-
-func _on_button_area_entered(area):
-	if Input.is_action_pressed("ui_select"):
-		$anim.play("showblocks")

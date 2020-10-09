@@ -2,8 +2,12 @@ extends Node2D
 
 
 func _ready():
-	pass
+	progress()
+	MusicController.play_music()
 
+func progress():
+	var save = HomeControl.new()
+	save.save_progress(7)
 
 func _on_botao1_body_entered(body):
 	$botoes/botao1/AnimationPlayer.play("hide_door")

@@ -4,6 +4,8 @@ var password = "zudtqcsson".to_upper()
 var palavra = ""
 
 func _ready():
+	MusicController.play_music()
+	progress()
 	pass
 
 func parede(letra):
@@ -71,4 +73,7 @@ func _on_nove_body_entered(body):
 	parede('n')
 	print(palavra)
 
+func progress():
+	var save = HomeControl.new()
+	save.save_progress(5)
 

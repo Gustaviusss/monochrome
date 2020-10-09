@@ -2,8 +2,12 @@ extends Node2D
 
 
 func _ready():
-	pass
+	progress()
+	MusicController.play_music()
 
+func progress():
+	var save = HomeControl.new()
+	save.save_progress(8)
 
 func _on_b1_body_entered(body):
 	$anim.play("1_move")

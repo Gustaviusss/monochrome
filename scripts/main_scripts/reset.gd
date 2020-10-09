@@ -18,5 +18,6 @@ func _on_pause_pressed():
 	if show == false:
 		$anim.play("show_buttons")
 		show = true
-	else:
+	elif show == true:
 		$anim.play("hide_buttons")
+		show = false

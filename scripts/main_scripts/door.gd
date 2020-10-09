@@ -9,4 +9,5 @@ func _ready():
 
 func _on_porta_body_entered(body):
 	if body.name == "pi":
+		$anim.play("change_scene")
 		get_tree().change_scene(local)

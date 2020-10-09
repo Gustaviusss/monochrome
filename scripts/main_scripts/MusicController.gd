@@ -1,6 +1,6 @@
 extends Node
 
-var theme_song = load("res://assets/sfx/buttercup.ogg")
+var theme_song = load("res://assets/sfx/tema3.wav")
 
 func _ready():
 	pass
