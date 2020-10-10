@@ -8,3 +8,9 @@ func _ready():
 func play_music():
 	$Music.stream = theme_song
 	$Music.play()
+
+func _on_Music_finished():
+	play_music()
+
+func stop_music():
+	$Music.stop()

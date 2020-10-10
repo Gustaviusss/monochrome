@@ -6,6 +6,7 @@ var save_file = SAveFile.new()
 var save_game = preload("res://resourses/savegame.tres")
 
 func _ready():
+	MusicController.stop_music()
 	if save_game.level == 1:
 		$bContinue.disabled = true
 		$bContinue.visible = false
@@ -17,7 +18,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene("res://scenes/fases/Fase1.tscn") 
 	elif Input.is_action_just_pressed("continue"):
-			get_tree().change_scene(LVL_PATH % save_game.level)
+		MusicController.play_music()
+		get_tree().change_scene(LVL_PATH % save_game.level)
 
 func save_progress(num:int):
 	save_file.level = num

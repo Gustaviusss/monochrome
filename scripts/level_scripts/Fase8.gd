@@ -3,7 +3,6 @@ extends Node2D
 
 func _ready():
 	progress()
-	MusicController.play_music()
 
 func progress():
 	var save = HomeControl.new()
