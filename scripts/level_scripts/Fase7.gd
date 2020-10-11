@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	MusicController.play_music()
 	progress()
 
 func progress():
@@ -14,3 +15,7 @@ func _on_botao1_body_entered(body):
 
 func _on_botao2_body_entered(body):
 	$botoes/botao1/AnimationPlayer.play("show_floor")
+
+
+func _on_botao3_body_entered(body):
+	get_tree().reload_current_scene()

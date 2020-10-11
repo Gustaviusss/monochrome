@@ -12,3 +12,4 @@ func _on_home_pressed():
 
 func _on_reload_pressed():
 	get_tree().reload_current_scene()
+

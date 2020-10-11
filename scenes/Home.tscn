@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/img/pi.png" type="Texture" id=1]
 [ext_resource path="res://assets/img/bstart.png" type="Texture" id=2]
 [ext_resource path="res://assets/img/title.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/pixelize.shader" type="Shader" id=4]
 [ext_resource path="res://scripts/main_scripts/Home.gd" type="Script" id=5]
+[ext_resource path="res://assets/img/Idle 26.png" type="Texture" id=6]
 [ext_resource path="res://assets/img/bcontinue.png" type="Texture" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -116,5 +117,22 @@ texture = ExtResource( 7 )
 [node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "glitch"
 anims/glitch = SubResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 1200.0
+margin_top = 648.0
+margin_right = 1256.0
+margin_bottom = 704.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Button"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+scale = Vector2( 2.66667, 2.54545 )
+texture = ExtResource( 6 )
+centered = false
 [connection signal="pressed" from="bStart" to="." method="_on_bStart_pressed"]
 [connection signal="pressed" from="bContinue" to="." method="_on_bContinue_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

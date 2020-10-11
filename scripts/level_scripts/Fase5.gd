@@ -4,6 +4,7 @@ var password = "zudtqcsson".to_upper()
 var palavra = ""
 
 func _ready():
+	MusicController.play_music()
 	progress()
 	pass
 

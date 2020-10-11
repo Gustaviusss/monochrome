@@ -12,6 +12,7 @@ func progress():
 func _on_porta_body_entered(body):
 	$AnimationPlayer.play("up_credits")
 	$Timer.start()
+	$porta/CollisionShape2D.disabled = true
 
 
 func _on_Timer_timeout():
