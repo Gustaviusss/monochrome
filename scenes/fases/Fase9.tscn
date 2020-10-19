@@ -1,0 +1,419 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/AndroidControls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/img/block.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/button.png" type="Texture" id=6]
+[ext_resource path="res://scripts/level_scripts/Fase9.gd" type="Script" id=7]
+[ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 12.2225 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 72, 11.9158 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 96, 12.0334 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 48, 12 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 72, 12 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 2.16945, 7.47913 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 84, 12 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "move"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 696, 564 ), Vector2( 1120, 564 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("greenFloor/grnfloor1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("greenFloor/grnfloor2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("greenFloor/grnfloor3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("greenFloor/grnfloor4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("greenFloor/grnfloor5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("greenFloor/grnfloor6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("btn1/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 2,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "show_red"
+length = 5.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("redFloor/redfloor1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("redFloor/redfloor2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("redFloor/redfloor3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("redFloor/redfloor4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("redFloor/redfloor5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("btn2/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[node name="Fase9" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="AndroidControls" parent="." instance=ExtResource( 4 )]
+
+[node name="Label" parent="." instance=ExtResource( 3 )]
+margin_left = -24.0
+margin_top = 24.0
+margin_right = 488.0
+margin_bottom = 88.0
+text = "o que os olhos nao veem"
+
+[node name="pi" parent="." instance=ExtResource( 8 )]
+position = Vector2( 27.8693, 552 )
+
+[node name="real_blocks" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 48, 0, 0, 49, 0, 0, 50, 0, 0, 51, 0, 0, 52, 0, 0, 65536, 0, 0, 65570, 0, 0, 65588, 0, 0, 131072, 0, 0, 131106, 0, 0, 196608, 0, 0, 196642, 0, 0, 262144, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262178, 0, 0, 262191, 0, 0, 262192, 0, 0, 262193, 0, 0, 262194, 0, 0, 262195, 0, 0, 262196, 0, 0, 327680, 0, 0, 327701, 0, 0, 327714, 0, 0, 327732, 0, 0, 393216, 0, 0, 393237, 0, 0, 393250, 0, 0, 393268, 0, 0, 458752, 0, 0, 458773, 0, 0, 458786, 0, 0, 458804, 0, 0, 524288, 0, 0, 524309, 0, 0, 524322, 0, 0, 524340, 0, 0, 589824, 0, 0, 589845, 0, 0, 589858, 0, 0, 589876, 0, 0, 655360, 0, 0, 655381, 0, 0, 655394, 0, 0, 655412, 0, 0, 720896, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720930, 0, 0, 720948, 0, 0, 786432, 0, 0, 786453, 0, 0, 786466, 0, 0, 786484, 0, 0, 851968, 0, 0, 851989, 0, 0, 852002, 0, 0, 852020, 0, 0, 917504, 0, 0, 917525, 0, 0, 917538, 0, 0, 917556, 0, 0, 983040, 0, 0, 983061, 0, 0, 983074, 0, 0, 983092, 0, 0, 1048576, 0, 0, 1048597, 0, 0, 1048610, 0, 0, 1048628, 0, 0, 1114112, 0, 0, 1114133, 0, 0, 1114146, 0, 0, 1114164, 0, 0, 1179648, 0, 0, 1179669, 0, 0, 1179682, 0, 0, 1179700, 0, 0, 1245184, 0, 0, 1245205, 0, 0, 1245218, 0, 0, 1245236, 0, 0, 1310720, 0, 0, 1310741, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1310756, 0, 0, 1310757, 0, 0, 1310758, 0, 0, 1310759, 0, 0, 1310772, 0, 0, 1441791, 0, 0, 1376256, 0, 0, 1376257, 0, 0, 1376258, 0, 0, 1376259, 0, 0, 1376277, 0, 0, 1376308, 0, 0, 1507327, 0, 0, 1441813, 0, 0, 1441844, 0, 0, 1572863, 0, 0, 1507349, 0, 0, 1507380, 0, 0, 1638399, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572868, 0, 0, 1572869, 0, 0, 1572870, 0, 0, 1572871, 0, 0, 1572885, 0, 0, 1572916, 0, 0 )
+
+[node name="door" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1249.99, 63.9317 )
+local = "res://scenes/fases/Fase10.tscn"
+
+[node name="greenFloor" type="Node" parent="."]
+
+[node name="grnfloor1" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 216, 480 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor1"]
+position = Vector2( -1.33514e-05, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor1"]
+shape = SubResource( 1 )
+
+[node name="grnfloor2" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 384, 432 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor2"]
+position = Vector2( -1.14441e-05, 0 )
+scale = Vector2( 6, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor2"]
+shape = SubResource( 2 )
+
+[node name="grnfloor3" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 144, 360 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor3"]
+position = Vector2( -3.8147e-06, 0 )
+scale = Vector2( 8, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor3"]
+shape = SubResource( 3 )
+
+[node name="grnfloor4" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 360, 300 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor4"]
+position = Vector2( -1.33514e-05, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor4"]
+shape = SubResource( 1 )
+
+[node name="grnfloor5" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 264, 204 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor5"]
+position = Vector2( -1.14441e-05, 0 )
+scale = Vector2( 6, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor5"]
+shape = SubResource( 2 )
+
+[node name="grnfloor6" type="StaticBody2D" parent="greenFloor"]
+visible = false
+position = Vector2( 120, 132 )
+
+[node name="Sprite" type="Sprite" parent="greenFloor/grnfloor6"]
+position = Vector2( -1.33514e-05, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenFloor/grnfloor6"]
+shape = SubResource( 1 )
+
+[node name="redFloor" type="Node" parent="."]
+
+[node name="redfloor1" type="StaticBody2D" parent="redFloor"]
+visible = false
+position = Vector2( 1056, 420 )
+
+[node name="Sprite" type="Sprite" parent="redFloor/redfloor1"]
+position = Vector2( 7.62939e-06, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redFloor/redfloor1"]
+shape = SubResource( 4 )
+
+[node name="redfloor2" type="StaticBody2D" parent="redFloor"]
+visible = false
+position = Vector2( 1200, 348 )
+
+[node name="Sprite" type="Sprite" parent="redFloor/redfloor2"]
+position = Vector2( 7.62939e-06, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redFloor/redfloor2"]
+shape = SubResource( 4 )
+
+[node name="redfloor3" type="StaticBody2D" parent="redFloor"]
+visible = false
+position = Vector2( 1056, 276 )
+
+[node name="Sprite" type="Sprite" parent="redFloor/redfloor3"]
+position = Vector2( 7.62939e-06, 0 )
+scale = Vector2( 4, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redFloor/redfloor3"]
+shape = SubResource( 4 )
+
+[node name="redfloor4" type="StaticBody2D" parent="redFloor"]
+visible = false
+position = Vector2( 912, 204 )
+
+[node name="Sprite" type="Sprite" parent="redFloor/redfloor4"]
+position = Vector2( -9.53674e-07, 0 )
+scale = Vector2( 6, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redFloor/redfloor4"]
+shape = SubResource( 5 )
+
+[node name="redfloor5" type="StaticBody2D" parent="redFloor"]
+visible = false
+position = Vector2( 1104, 132 )
+
+[node name="Sprite" type="Sprite" parent="redFloor/redfloor5"]
+position = Vector2( -9.53674e-07, 0 )
+scale = Vector2( 6, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redFloor/redfloor5"]
+shape = SubResource( 5 )
+
+[node name="btn1" type="Area2D" parent="."]
+position = Vector2( 24, 480 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="btn1"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="btn1"]
+position = Vector2( 3.86929, 0 )
+shape = SubResource( 6 )
+
+[node name="btn2" type="Area2D" parent="."]
+position = Vector2( 504, 246.585 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="btn2"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="btn2"]
+position = Vector2( -3.70734, 0 )
+shape = SubResource( 6 )
+
+[node name="moved_floor" type="StaticBody2D" parent="."]
+position = Vector2( 937.742, 564 )
+
+[node name="Sprite" type="Sprite" parent="moved_floor"]
+scale = Vector2( 7, 1 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moved_floor"]
+shape = SubResource( 7 )
+
+[node name="anim_floor" type="AnimationPlayer" parent="moved_floor"]
+autoplay = "move"
+anims/move = SubResource( 8 )
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/show_green = SubResource( 9 )
+anims/show_red = SubResource( 10 )
+[connection signal="body_entered" from="btn1" to="." method="_on_btn1_body_entered"]
+[connection signal="body_entered" from="btn2" to="." method="_on_btn2_body_entered"]

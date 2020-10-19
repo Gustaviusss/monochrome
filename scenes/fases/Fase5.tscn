@@ -545,7 +545,7 @@ anims/destroy = SubResource( 13 )
 [node name="door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 21.1517, 59.4723 )
 scale = Vector2( 1, 1.15 )
-local = "res://scenes/fases/Fase10.tscn"
+local = "res://scenes/fases/Fase9.tscn"
 
 [node name="Control" type="Control" parent="."]
 margin_left = 532.596
