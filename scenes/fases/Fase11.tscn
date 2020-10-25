@@ -26,9 +26,9 @@ position = Vector2( 51.0875, 546.484 )
 
 [node name="Label" parent="." instance=ExtResource( 4 )]
 margin_left = 0.0
-margin_top = 8.909
-margin_right = 512.0
-margin_bottom = 72.909
+margin_top = 9.0
+margin_right = 495.0
+margin_bottom = 73.0
 text = "cima e baixo"
 
 [node name="Area2D" type="Area2D" parent="."]

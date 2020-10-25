@@ -1,6 +1,7 @@
 extends Node
 
-var theme_song = load("res://assets/sfx/tema3.wav")
+export var themesongpath = "res://assets/sfx/tema3.wav"
+var theme_song = load(themesongpath) 
 
 func _ready():
 	pass
@@ -14,4 +15,4 @@ func stop_music():
 
 
 func _on_Music_finished():
-	play_music()
+	$Music.play()

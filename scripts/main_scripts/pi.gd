@@ -5,6 +5,7 @@ var up = Vector2(0,-1)
 var jump = -725
 var motion = Vector2(0,0)
 var gravity = 45
+var stop = 0
 var speed = 400
 export var fliph = false
 export var flipv = false
@@ -15,9 +16,6 @@ func _ready():
 		$Sprite.flip_h = true
 	else:
 		$Sprite.flip_h = false
-	
-	
-
 
 func _physics_process(delta):
 	if antigravity == false:
@@ -30,6 +28,11 @@ func _physics_process(delta):
 	else:
 		$Sprite.flip_v = false
 	
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision:
+			if collision.collider.name == 'Spike':
+				get_tree().reload_current_scene()
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
@@ -43,16 +46,16 @@ func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_pressed("jump"):
 			motion.y = jump
-			$Sprite.frame = 5
+			$Sprite.frame = 1
 		else:
 			$Sprite.frame = 0
 	if is_on_ceiling():
 		if Input.is_action_pressed("jump"):
 			motion.y = -jump
-			$Sprite.frame = 5
+			$Sprite.frame = 1
 		else:
 			$Sprite.frame = 0
-	
+	 
 	motion = move_and_slide(motion, up)
 	
 	if $".".get_position().y >= 750 || $".".get_position().y <= -150:

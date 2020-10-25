@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/img/button.png" type="Texture" id=6]
 [ext_resource path="res://scripts/level_scripts/Fase9.gd" type="Script" id=7]
 [ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/objects/MoveFloor.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 12.2225 )
@@ -27,27 +28,7 @@ extents = Vector2( 72, 12 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 2.16945, 7.47913 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 84, 12 )
-
-[sub_resource type="Animation" id=8]
-resource_name = "move"
-length = 4.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 696, 564 ), Vector2( 1120, 564 ) ]
-}
-
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("greenFloor/grnfloor1:visible")
@@ -134,9 +115,9 @@ tracks/6/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 resource_name = "show_red"
-length = 5.0
+length = 1.5
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("redFloor/redfloor1:visible")
@@ -398,22 +379,12 @@ texture = ExtResource( 6 )
 position = Vector2( -3.70734, 0 )
 shape = SubResource( 6 )
 
-[node name="moved_floor" type="StaticBody2D" parent="."]
-position = Vector2( 937.742, 564 )
-
-[node name="Sprite" type="Sprite" parent="moved_floor"]
-scale = Vector2( 7, 1 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="moved_floor"]
-shape = SubResource( 7 )
-
-[node name="anim_floor" type="AnimationPlayer" parent="moved_floor"]
-autoplay = "move"
-anims/move = SubResource( 8 )
-
 [node name="anim" type="AnimationPlayer" parent="."]
-anims/show_green = SubResource( 9 )
-anims/show_red = SubResource( 10 )
+anims/show_green = SubResource( 7 )
+anims/show_red = SubResource( 8 )
+
+[node name="MoveFloor" parent="." instance=ExtResource( 9 )]
+position = Vector2( 576, 570 )
+moveSize = 500
 [connection signal="body_entered" from="btn1" to="." method="_on_btn1_body_entered"]
 [connection signal="body_entered" from="btn2" to="." method="_on_btn2_body_entered"]

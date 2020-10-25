@@ -101,7 +101,6 @@ local = "res://scenes/fases/Fase5.tscn"
 
 [node name="pi" parent="." instance=ExtResource( 1 )]
 position = Vector2( 36.5992, 540.661 )
-jump = -650
 
 [node name="botoes" type="Node" parent="."]
 

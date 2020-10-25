@@ -66,10 +66,9 @@ __meta__ = {
 [node name="img" type="Node" parent="."]
 
 [node name="titlepi" type="Sprite" parent="img"]
-position = Vector2( 857, 248 )
+position = Vector2( 858, 253 )
 scale = Vector2( 5.75, 6.91667 )
 texture = ExtResource( 1 )
-vframes = 3
 hframes = 3
 
 [node name="title" type="Sprite" parent="img"]
