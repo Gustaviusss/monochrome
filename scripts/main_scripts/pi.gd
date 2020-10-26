@@ -31,7 +31,7 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision:
-			if collision.collider.name == 'Spike':
+			if "Spike" in collision.collider.name:
 				get_tree().reload_current_scene()
 	
 	if Input.is_action_pressed("ui_right"):

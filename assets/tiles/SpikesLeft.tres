@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=2]
 
-[ext_resource path="res://assets/img/spike.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/spike-left.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 9, 11, -10, 11, 0, -10 )
+points = PoolVector2Array( 10, -10, 10, 10, -10, 0 )
 
 [resource]
 0/name = "Sprite"
@@ -14,8 +14,8 @@ points = PoolVector2Array( 9, 11, -10, 11, 0, -10 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 12, 12 )
 0/navigation_offset = Vector2( 12, 12 )
-0/shape_offset = Vector2( 12, 12 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 12, 12 )
+0/shape_offset = Vector2( 10.7022, 11.4691 )
+0/shape_transform = Transform2D( -1, -8.74228e-08, 8.74228e-08, -1, 10.7022, 11.4691 )
 0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
@@ -24,6 +24,6 @@ points = PoolVector2Array( 9, 11, -10, 11, 0, -10 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 12, 12 )
+"shape_transform": Transform2D( -1, -8.74228e-08, 8.74228e-08, -1, 10.7022, 11.4691 )
 } ]
 0/z_index = 0

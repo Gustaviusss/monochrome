@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/objects/MoveFloor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/AndroidControls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/Spike.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/tiles/SpikesUp.tres" type="TileSet" id=6]
+[ext_resource path="res://assets/img/button.png" type="Texture" id=7]
+[ext_resource path="res://scripts/level_scripts/Fase14.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.50177, 8.66281 )
+
+[node name="Fase14" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="AndroidControls" parent="." instance=ExtResource( 3 )]
+
+[node name="real_blocks" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 48, 0, 0, 49, 0, 0, 50, 0, 0, 51, 0, 0, 52, 0, 0, 65536, 0, 0, 65588, 0, 0, 131072, 0, 0, 131124, 0, 0, 196608, 0, 0, 196660, 0, 0, 262144, 0, 0, 262196, 0, 0, 327680, 0, 0, 327732, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393266, 0, 0, 393267, 0, 0, 393268, 0, 0, 458752, 0, 0, 458804, 0, 0, 524288, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524340, 0, 0, 589824, 0, 0, 589868, 0, 0, 589869, 0, 0, 589870, 0, 0, 589871, 0, 0, 589876, 0, 0, 655360, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655412, 0, 0, 720896, 0, 0, 720946, 0, 0, 720947, 0, 0, 720948, 0, 0, 786432, 0, 0, 786455, 0, 0, 786456, 0, 0, 786457, 0, 0, 786458, 0, 0, 786459, 0, 0, 786460, 0, 0, 786484, 0, 0, 851968, 0, 0, 852020, 0, 0, 917504, 0, 0, 917536, 0, 0, 917537, 0, 0, 917538, 0, 0, 917539, 0, 0, 917540, 0, 0, 917551, 0, 0, 917552, 0, 0, 917553, 0, 0, 917554, 0, 0, 917555, 0, 0, 917556, 0, 0, 983040, 0, 0, 983092, 0, 0, 1048576, 0, 0, 1048616, 0, 0, 1048617, 0, 0, 1048618, 0, 0, 1048619, 0, 0, 1048628, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114164, 0, 0, 1179648, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179694, 0, 0, 1179695, 0, 0, 1179696, 0, 0, 1179697, 0, 0, 1179698, 0, 0, 1179699, 0, 0, 1179700, 0, 0, 1310719, 0, 0, 1245184, 0, 0, 1245236, 0, 0, 1376255, 0, 0, 1310749, 0, 0, 1310750, 0, 0, 1310772, 0, 0, 1441791, 0, 0, 1376308, 0, 0, 1507327, 0, 0, 1441844, 0, 0, 1572863, 0, 0, 1507350, 0, 0, 1507351, 0, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507380, 0, 0, 1638399, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572916, 0, 0 )
+
+[node name="door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40.5838, 113.113 )
+
+[node name="MoveFloor" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 504 )
+speed = 0.3
+moveSize = 850
+
+[node name="Spike" parent="." instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 1245213, 0, 0, 1245214, 0, 0 )
+
+[node name="SpikeHide" parent="." instance=ExtResource( 5 )]
+visible = false
+tile_data = PoolIntArray( 524332, 0, 0, 524333, 0, 0, 852018, 0, 0, 852019, 0, 0, 1245213, 0, 0, 1245214, 0, 0 )
+
+[node name="SpikeUp" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 24, 24 )
+format = 1
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65566, 0, 0, 65567, 0, 0, 65568, 0, 0, 65569, 0, 0, 65570, 0, 0, 65571, 0, 0, 65572, 0, 0, 65573, 0, 0, 65574, 0, 0, 65575, 0, 0, 65576, 0, 0, 65577, 0, 0, 65578, 0, 0, 65579, 0, 0, 65580, 0, 0, 65581, 0, 0, 65582, 0, 0, 65583, 0, 0, 65584, 0, 0, 65585, 0, 0, 65586, 0, 0, 65587, 0, 0 )
+
+[node name="Button1" type="Area2D" parent="."]
+position = Vector2( 24.7157, 382.148 )
+
+[node name="Sprite" type="Sprite" parent="Button1"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button1"]
+position = Vector2( 2.80933, 0 )
+shape = SubResource( 1 )
+
+[node name="Button2" type="Area2D" parent="."]
+position = Vector2( 1246.95, 406.148 )
+
+[node name="Sprite" type="Sprite" parent="Button2"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2"]
+position = Vector2( -2.54822, 0 )
+shape = SubResource( 1 )
+
+[node name="Button3" type="Area2D" parent="."]
+position = Vector2( 1247.41, 124.384 )
+
+[node name="Sprite" type="Sprite" parent="Button3"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button3"]
+position = Vector2( -2.54822, 0 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Button1" to="." method="_on_Button1_body_entered"]
+[connection signal="body_entered" from="Button2" to="." method="_on_Button2_body_entered"]
