@@ -2,11 +2,12 @@ extends KinematicBody2D
 class_name PlayerControl
 
 var up = Vector2(0,-1)
-var jump = -725
+export var jump = -725
 var motion = Vector2(0,0)
 var gravity = 45
 var stop = 0
-var speed = 400
+var inertia = 8
+export var speed = 400
 export var fliph = false
 export var flipv = false
 export var antigravity = false
@@ -33,6 +34,8 @@ func _physics_process(delta):
 		if collision:
 			if "Spike" in collision.collider.name:
 				get_tree().reload_current_scene()
+			if "box-block" in collision.collider.name:
+				collision.collider.apply_central_impulse(-collision.normal * inertia)
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
@@ -56,7 +59,7 @@ func _physics_process(delta):
 		else:
 			$Sprite.frame = 0
 	 
-	motion = move_and_slide(motion, up)
+	motion = move_and_slide(motion, up, false, 4, PI/4, false)
 	
 	if $".".get_position().y >= 750 || $".".get_position().y <= -150:
 		get_tree().reload_current_scene()
