@@ -21,8 +21,10 @@ func _ready():
 func _physics_process(delta):
 	if antigravity == false:
 		motion.y += gravity
+		flipv = false
 	if antigravity == true:
 		motion.y -= gravity
+		flipv=true
 	
 	if flipv == true:
 		$Sprite.flip_v = true
