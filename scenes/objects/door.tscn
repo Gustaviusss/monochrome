@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.38171, 27.7615 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "change_scene"
 length = 0.6
 
@@ -22,5 +22,5 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
-anims/change_scene = SubResource( 3 )
+anims/change_scene = SubResource( 2 )
 [connection signal="body_entered" from="porta" to="." method="_on_porta_body_entered"]

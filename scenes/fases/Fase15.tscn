@@ -44,7 +44,7 @@ tracks/1/keys = {
 "values": [ 4.0, -4.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "move_door"
 length = 2.0
 tracks/0/type = "value"
@@ -60,8 +60,7 @@ tracks/0/keys = {
 "values": [ Vector2( 176.018, 486.627 ), Vector2( 174.334, 399.636 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "uninvert_gravity"
+[sub_resource type="Animation" id=4]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("box-block:gravity_scale")
@@ -160,7 +159,7 @@ shape = SubResource( 1 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/invert_gravity = SubResource( 2 )
-anims/move_door = SubResource( 4 )
-anims/uninvert_gravity = SubResource( 3 )
+anims/move_door = SubResource( 3 )
+anims/uninvert_gravity = SubResource( 4 )
 [connection signal="body_entered" from="buttons/button" to="." method="_on_button_body_entered"]
 [connection signal="body_entered" from="buttons/button2" to="." method="_on_button2_body_entered"]
