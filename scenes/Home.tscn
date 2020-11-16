@@ -77,14 +77,6 @@ scale = Vector2( 1.14133, 1.12666 )
 z_index = -1
 texture = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="img"]
-position = Vector2( 660.614, 382.294 )
-texture = ExtResource( 2 )
-
-[node name="Sprite2" type="Sprite" parent="img"]
-position = Vector2( 651.614, 502.294 )
-texture = ExtResource( 7 )
-
 [node name="bStart" type="Button" parent="."]
 process_priority = 1
 self_modulate = Color( 1, 1, 1, 0 )
@@ -101,6 +93,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="bStart"]
+position = Vector2( 164.614, 38.294 )
+texture = ExtResource( 2 )
+
 [node name="bContinue" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 439.0
@@ -112,6 +108,10 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite2" type="Sprite" parent="bContinue"]
+position = Vector2( 204.614, 38.294 )
+texture = ExtResource( 7 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "glitch"
