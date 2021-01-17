@@ -1,7 +1,8 @@
 extends Node2D
 
-
+var save = HomeControl.new()
 func _ready():
+	save.save_progress(14)
 	pass
 
 func _on_Button1_body_entered(body):

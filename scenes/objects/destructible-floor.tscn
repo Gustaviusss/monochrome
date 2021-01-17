@@ -62,7 +62,6 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor1"]
 visible = false
 shape = SubResource( 1 )
-one_way_collision = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0570068, -12.0662 )

@@ -130,11 +130,10 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="pi" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1001.45, 74.2666 )
-flip = true
 
 [node name="door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1228.07, 544.828 )
-local = "res://scenes/fases/Fase6.tscn"
+local = "res://scenes/fases/Fase11.tscn"
 
 [node name="button" type="Area2D" parent="."]
 position = Vector2( 359.032, 552.584 )

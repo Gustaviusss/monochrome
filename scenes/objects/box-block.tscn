@@ -8,7 +8,7 @@ extents = Vector2( 36, 36 )
 [node name="box-block" type="RigidBody2D"]
 linear_damp = 5.0
 angular_damp = 2.0
-applied_torque = 3.0
+applied_torque = 4.0
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 4.5, 4.5 )

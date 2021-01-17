@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/objects/blocks.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/destructible-floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/MoveFloor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/AndroidControls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/level_scripts/Fase19.gd" type="Script" id=8]
+
+[node name="Fase19" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="pi" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1244.57, 542.839 )
+fliph = true
+
+[node name="real_blocks" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 1572913, 0, 0, 1572914, 0, 0, 1572915, 0, 0, 1572916, 0, 0 )
+
+[node name="false-floor" type="Node" parent="."]
+
+[node name="floorarea8" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1080, 528 )
+
+[node name="floorarea9" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 936, 528 )
+
+[node name="floorarea10" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 792, 528 )
+
+[node name="floorarea11" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 648, 528 )
+
+[node name="floorarea12" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 528, 528 )
+
+[node name="floorarea13" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 384, 528 )
+
+[node name="floorarea14" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 240, 528 )
+
+[node name="floorarea15" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 96, 528 )
+
+[node name="floorarea16" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 216, 432 )
+
+[node name="floorarea17" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 360, 432 )
+
+[node name="floorarea18" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 504, 432 )
+
+[node name="floorarea19" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 648, 432 )
+
+[node name="floorarea20" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 792, 432 )
+
+[node name="floorarea21" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 936, 432 )
+
+[node name="floorarea22" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1080, 432 )
+
+[node name="floorarea23" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1224, 432 )
+
+[node name="floorarea24" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1080, 336 )
+
+[node name="floorarea25" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 936, 336 )
+
+[node name="floorarea26" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 792, 336 )
+
+[node name="floorarea27" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 648, 336 )
+
+[node name="floorarea28" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 504, 336 )
+
+[node name="floorarea29" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 360, 336 )
+
+[node name="floorarea30" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 216, 336 )
+
+[node name="floorarea31" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 72, 336 )
+
+[node name="floorarea32" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 192, 240 )
+
+[node name="floorarea33" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 336, 240 )
+
+[node name="floorarea34" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 480, 240 )
+
+[node name="floorarea35" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 624, 240 )
+
+[node name="floorarea36" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 768, 240 )
+
+[node name="floorarea37" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 912, 240 )
+
+[node name="floorarea38" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1056, 240 )
+
+[node name="floorarea39" parent="false-floor" instance=ExtResource( 3 )]
+position = Vector2( 1200, 240 )
+
+[node name="MoveFloor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 170.105, 142.105 )
+moveSize = 800
+
+[node name="door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 22.0526, 63.1579 )
+local = "res://scenes/fases/Fase7.tscn"
+
+[node name="Label" parent="." instance=ExtResource( 6 )]
+margin_left = 750.539
+margin_top = -1.9996
+margin_right = 1262.54
+margin_bottom = 62.0004
+text = "Cuidado, fragil"
+
+[node name="AndroidControls" parent="." instance=ExtResource( 7 )]

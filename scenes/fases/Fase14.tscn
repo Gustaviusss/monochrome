@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/objects/MoveFloor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/img/button.png" type="Texture" id=7]
 [ext_resource path="res://scripts/level_scripts/Fase14.gd" type="Script" id=8]
 [ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/objects/text.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.50177, 8.66281 )
@@ -38,6 +39,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40.5838, 113.113 )
+local = "res://scenes/fases/Fase18.tscn"
 
 [node name="MoveFloor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 168, 504 )
@@ -96,6 +98,13 @@ position = Vector2( 36.7157, 528 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/rain = SubResource( 2 )
+
+[node name="Label" parent="." instance=ExtResource( 10 )]
+margin_left = 401.752
+margin_top = 53.2003
+margin_right = 913.752
+margin_bottom = 117.2
+text = "consequencias"
 [connection signal="body_entered" from="Button1" to="." method="_on_Button1_body_entered"]
 [connection signal="body_exited" from="Button1" to="." method="_on_Button1_body_exited"]
 [connection signal="body_entered" from="Button2" to="." method="_on_Button2_body_entered"]

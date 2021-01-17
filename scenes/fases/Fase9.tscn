@@ -212,7 +212,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="door" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1249.99, 63.9317 )
-local = "res://scenes/fases/Fase10.tscn"
+local = "res://scenes/fases/Fase13.tscn"
 
 [node name="greenFloor" type="Node" parent="."]
 

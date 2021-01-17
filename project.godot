@@ -20,14 +20,14 @@ _global_script_classes=[ {
 "path": "res://scripts/main_scripts/pi.gd"
 }, {
 "base": "Resource",
-"class": "SAveFile",
+"class": "SaveFile",
 "language": "GDScript",
 "path": "res://scripts/main_scripts/SaveFile.gd"
 } ]
 _global_script_class_icons={
 "HomeControl": "",
 "PlayerControl": "",
-"SAveFile": ""
+"SaveFile": ""
 }
 
 [application]

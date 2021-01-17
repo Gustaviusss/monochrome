@@ -1,5 +1,5 @@
 extends Resource
-class_name SAveFile
+class_name SaveFile
 
 export var level = 1
 

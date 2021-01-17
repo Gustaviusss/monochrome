@@ -1,6 +1,6 @@
 extends Node
 
-export var themesongpath = "res://assets/sfx/tema3.wav"
+export var themesongpath = "res://assets/sfx/main-theme.ogg"
 var theme_song = load(themesongpath) 
 
 func _ready():

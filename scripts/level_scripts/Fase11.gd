@@ -1,8 +1,10 @@
 extends Node2D
 
+var save = HomeControl.new()
 var control = PlayerControl.new()
 
 func _ready():
+	save.save_progress(11)
 	pass
 
 

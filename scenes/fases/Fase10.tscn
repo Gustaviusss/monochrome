@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/objects/pi.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/img/door.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/fonts/PixelBit-Free.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://scenes/objects/resetb.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/level_scripts/Fase10.gd" type="Script" id=7]
+[ext_resource path="res://assets/fonts/VPPixel-Simplified.otf" type="DynamicFontData" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 12 )
@@ -43,6 +44,10 @@ tracks/1/keys = {
 size = 33
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 8 )
+
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 26.1102 )
 
@@ -62,28 +67,42 @@ position = Vector2( 648, 544 )
 [node name="chao" type="Node" parent="."]
 
 [node name="chao1" type="StaticBody2D" parent="chao"]
-position = Vector2( 1024, 168 )
+position = Vector2( 192, 168 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao1"]
 position = Vector2( 36, 12 )
 shape = SubResource( 1 )
 
+[node name="chao5" type="StaticBody2D" parent="chao"]
+position = Vector2( 1032, 168 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao5"]
+position = Vector2( 36, 12 )
+shape = SubResource( 1 )
+
+[node name="chao6" type="StaticBody2D" parent="chao"]
+position = Vector2( 936, 216 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao6"]
+position = Vector2( 36, 12 )
+shape = SubResource( 1 )
+
 [node name="chao2" type="StaticBody2D" parent="chao"]
-position = Vector2( 920, 232 )
+position = Vector2( 288, 240 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao2"]
 position = Vector2( 36, 12 )
 shape = SubResource( 1 )
 
 [node name="chao3" type="StaticBody2D" parent="chao"]
-position = Vector2( 824, 296 )
+position = Vector2( 408, 288 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao3"]
 position = Vector2( 36, 12 )
 shape = SubResource( 1 )
 
 [node name="chao4" type="StaticBody2D" parent="chao"]
-position = Vector2( 744, 352 )
+position = Vector2( 504, 336 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao/chao4"]
 position = Vector2( 36, 12 )
@@ -102,8 +121,8 @@ anims/up_credits = SubResource( 2 )
 [node name="Control" type="Control" parent="control"]
 margin_left = 408.0
 margin_top = 48.0
-margin_right = 636.982
-margin_bottom = 88.0
+margin_right = 636.995
+margin_bottom = 87.9999
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,13 +133,12 @@ z_index = 1
 z_as_relative = false
 
 [node name="Label2" type="Label" parent="control/Control/Sprite"]
-margin_left = 336.0
-margin_top = 2216.0
-margin_right = 709.0
-margin_bottom = 3445.0
+margin_left = 362.0
+margin_top = 2448.0
+margin_right = 735.0
+margin_bottom = 3677.0
 custom_fonts/font = SubResource( 3 )
 text = "MONOCHROME
-*DEMO*
 
 FEITO POR
 GUSTA
@@ -132,20 +150,30 @@ MECÂNICAS POR
 GUSTA
 INARA
 RUTIELY
+Gomes
 
 MUSICA POR
 GUSTA
-*SERA MELHORADA* 
 
-DA UM FEEDBACK
-DA TRABALHO FAZER JOGO 
+considere ajudar jogos futuros patrocinando, qualquer quantia é bem vinda
+manda aquele pix maroto :)
+
 
  "
 align = 1
 autowrap = true
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="control/Control/Sprite/Label2"]
+margin_left = 16.0
+margin_top = 982.0
+margin_right = 363.0
+margin_bottom = 1024.0
+custom_fonts/font = SubResource( 5 )
+text = "gustavostark732@gmail.com "
 
 [node name="Label" type="Label" parent="control/Control/Sprite"]
 margin_left = 168.0

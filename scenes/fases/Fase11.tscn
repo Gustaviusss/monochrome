@@ -48,4 +48,5 @@ anims/uninvert = ExtResource( 8 )
 
 [node name="door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1076.35, 40.909 )
+local = "res://scenes/fases/Fase9.tscn"
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

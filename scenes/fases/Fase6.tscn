@@ -184,7 +184,7 @@ position = Vector2( 20.2733, 542.931 )
 
 [node name="door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1230.35, 66.4567 )
-local = "res://scenes/fases/Fase7.tscn"
+local = "res://scenes/fases/Fase12.tscn"
 
 [node name="inv_floor" type="Node" parent="."]
 

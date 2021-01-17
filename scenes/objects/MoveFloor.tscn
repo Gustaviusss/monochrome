@@ -9,6 +9,7 @@ extents = Vector2( 60, 12 )
 [node name="MoveFloor" type="RigidBody2D"]
 mode = 3
 script = ExtResource( 1 )
+speed = 2.0
 moveSize = 600
 
 [node name="Sprite" type="Sprite" parent="."]
